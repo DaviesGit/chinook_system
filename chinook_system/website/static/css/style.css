@@ -1,0 +1,140 @@
+@keyframes animated_background {
+    0% {
+        background-position-x: 0%;
+        background-position-y: -30%;
+        background-size: 130%;
+    }
+
+    20% {
+        background-position-y: -0%;
+    }
+
+    40% {
+        background-size: 110%;
+    }
+
+    60% {
+        background-position-y: -20%;
+    }
+
+    80% {
+        background-size: 140%;
+    }
+
+    100% {
+        background-position-x: 100%;
+        background-size: 130%;
+        background-position-y: -0%;
+    }
+}
+
+#tree {
+    background-image: url("../image/time-lapse-photo-of-stars-on-night-924824.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    background-size: cover;
+    /*    animation: animated_background 360s cubic-bezier(0.54, 2.78, 0.47, -1.74) infinite alternate;*/
+}
+
+#tree .node {}
+
+#tree .node,
+#tree .node > * {
+    cursor: pointer;
+    transition: r .2s ease-out, opacity .2s ease-out, font-size .2s ease-out, fill .2s ease-out, stroke-width .2s ease-out;
+}
+
+#tree .node > circle {
+    r: 8;
+    fill: white;
+    opacity: 0.8;
+}
+
+#tree .node:hover > circle {
+    r: 10;
+    opacity: 1;
+}
+
+.node > .info {
+    font-size: 5px;
+    fill: black;
+    opacity: 0.7;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.node:hover > .info {
+    opacity: 1;
+}
+
+.node > .info.back {
+    stroke: white;
+    stroke-width: 0.6px;
+    opacity: 0.4;
+}
+.node:hover > .info.back {
+    opacity: 0.6;
+    stroke-width: 1px;
+}
+
+
+
+.node > text.ico {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 10px;
+    opacity: 1;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.node:hover > text.ico {
+    font-size: 12px;
+    fill: #0074D9;
+}
+
+#tree .node.lg > circle {
+    r: 10;
+
+}
+
+#tree .node.lg:hover > circle {
+    r: 12;
+}
+
+.node.lg > text.ico {
+    font-size: 12px;
+
+}
+
+.node.lg:hover > text.ico {
+    font-size: 14px;
+
+}
+
+.node.lg > .info {
+    font-size: 6.5px;
+}
+
+#tree .node.sm > circle {
+    r: 6;
+
+}
+
+#tree .node.sm:hover > circle {
+    r: 8;
+}
+
+.node.sm > text.ico {
+    font-size: 8px;
+
+}
+
+.node.sm:hover > text.ico {
+    font-size: 10px;
+
+}
+
+.node.sm > .info {
+    font-size: 3.5px;
+}
